@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Access</title> <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      background-image: url('your-background-image.jpg');
+      background-size: cover;
+      font-family: Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .container {
+      position: relative;
+      width: 380px;
+      height: 420px;
+      background: rgba(255, 255, 255, 0.3); /* Changed to transparent white */
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 20px;
+      z-index: 2;
+      backdrop-filter: blur(3px); /* Added blur effect */
+    }
+
+    .container:before,
+    .container:after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 420px;
+      background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+      z-index: 1;
+      transform-origin: bottom right;
+      animation: animate 6s linear infinite;
+    }
+
+    .container:after {
+      animation-delay: -3s;
+    }
+
+    h2 {
+      text-align: center;
+      color: #dc143c;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #dc143c;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .clear-entries {
+      width: calc(50% - 5px);
+      text-align: left;
+      border: 1px solid #dc143c;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .clear-entries button,
+    .log-in-button {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #dc143c;
+      color: #ffffff;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+    }
+
+    .clear-entries button:hover,
+    .log-in-button:hover {
+      background-color: #b80c2f;
+    }
+
+    .log-in-button {
+      width: calc(50% - 5px);
+      margin-left: 10px;
+      border-radius: 4px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
+    }
+
+    .audio-control {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .audio-control button {
+      background-color: #dc143c;
+      color: #ffffff;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .audio-control button:hover {
+      background-color: #b80c2f;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="your-logo.jpg" alt="Logo" class="logo">
+    <h2>Student Access</h2>
+    <form id="login-form">
+      <div class="form-group"><br></br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="TUPM-22-1234" style="width: 90%;">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" style="width: 90%;">
+      </div>
+      <div class="button-container">
+        <div class="clear-entries">
+          <button id="clear-button">Clear Entries</button>
+        </div>
+        <button class="log-in-button" type="submit">Log In</button>
+      </div>
+    </form>
+  </div>
+
+  <audio id="audio" src="your-music-file.mp3" loop></audio>
+
+  <div class="audio-control">
+    <button id="play-button">Play</button>
+    <button id="pause-button">Pause</button>
+    <button id="stop-button">Stop</button>
+  </div>
+
+  <script>
+    document.getElementById("clear-button").addEventListener("click", function() {
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    });
+
+    document.getElementById("play-button").addEventListener("click", function() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    });
+
+    document.getElementById("pause-button").addEventListener("click", function() {
+      var audio = document.getElementById("audio");
+      audio.pause();
+    });
+
+    document.getElementById("stop-button").addEventListener("click", function() {
+      var audio = document.getElementById("audio");
+      audio.pause();
+      audio.currentTime = 0;
+    });
+
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      var validUsernames = ["TUPM-22-1234"];
+      var validPassword = "TUPSTUDENTACCESS";
+
+      if (validUsernames.includes(username) && password === validPassword) {
+        window.location.href = "file:///E:/1ST%20PAGE/WEBSITE%20COMBINATION/TUP%20VISSION%20AND%20MISSION/index.html"; // Redirect to the second page if the username and password match
+      } else {
+        alert("Invalid username or password. Please try again."); // Show an error message if the username or password is incorrect
+      }
+    });
+  </script>
+</body>
+</html>

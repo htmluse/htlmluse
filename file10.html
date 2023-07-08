@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BASIC HARDWARE TROUBLESHOOTING AND MAINTENANCE</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #800000; /* Dark crimson color */
+            color: #FFF; /* White text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            height: 50vw;
+            min-height: 400px;
+            max-height: 550px;
+            min-width: 300px;
+            color: #eee;
+        }
+
+        .header:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+        }
+
+        .header:before {
+            content: "";
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0); backface-visibility: hidden;
+            scale(1.0, 1.0);
+            transform: translateZ(0);
+            background: #1B2030 url(https://prodatarecover.com/wp-content/uploads/2017/12/computer-hardware-problems.png) 50% 0 no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            animation: grow 360s linear 10ms infinite;
+            transition: all 0.4s ease-in-out;
+            z-index: -2;
+        }
+
+        .header a {
+            color: #eee;
+        }
+
+        .menu {
+            display: block;
+            width: 40px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            text-decoration: none;
+        }
+
+        .menu:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            margin: 0 auto;
+            top: 5px;
+            left: 0;
+            right: 0;
+            box-shadow: 0 8px, 0 16px;
+        }
+
+        .logo {
+            border: 2px solid #fff;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
+            margin: 20px;
+            padding: 0px 10px;
+            font-weight: 900;
+            font-size: 1.1em;
+            line-height: 1;
+            box-sizing: border-box;
+            height: 40px;
+        }
+
+        .sides, .info {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .info {
+            width: 100%;
+            padding: 15% 10% 0 10%;
+            text-align: center;
+            text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+
+        .author {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url(https://upload.wikimedia.org/wikipedia/en/c/c8/Technological_University_of_the_Philippines_Seal.svg) center no-repeat;
+            background-size: cover;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+            margin-bottom: 3px;
+        }
+
+        .info h4, .meta {
+            font-size: 0.7em;
+        }
+
+        .meta {
+            font-style: italic;
+        }
+
+        @keyframes grow {
+            0% { transform: scale(1) translateY(0px); }
+            50% { transform: scale(1.2) translateY(-400px); }
+        }
+
+        .content {  
+            padding: 5% 10%;
+            text-align: justify;
+            font-family: 'Roboto', Arial, sans-serif; /* Example font style */
+        }
+
+        .content p {
+            text-align: justify;
+        }
+
+        .btn {
+            color: #333;
+            border: 2px solid;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+
+        .twtr {
+            margin-top: 100px;
+        }
+        
+        .btn.twtr:after {
+            content: "\1F426";
+            padding-left: 5px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="menu"></a>
+        <a href="#" class="logo">BASIC HARDWARE TROUBLESHOOTING AND MAINTENANCE </a>
+        <div class="info">
+            <div class="author"></div>
+            <h4>MIKE JERICHO A. GENOTIVA AND LEO NATHANIEL G. DRAGON</h4>
+            <div class="meta">Author</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>BASIC HARDWARE TROUBLESHOOTING AND MAINTENANCE</h2>
+        <p>Proper hardware troubleshooting and maintenance are essential for maintaining the optimal performance and longevity of your computer system. By understanding basic hardware troubleshooting techniques, you can effectively diagnose and resolve common hardware issues, ensuring that your computer operates smoothly.</p>
+    
+        <h3>1. Identifying Hardware Issues</h3>
+        <p>The first step in hardware troubleshooting is to identify the problem. This involves observing any unusual behavior or error messages displayed by your computer. Common hardware issues include:</p>
+        <ul>
+            <li>Malfunctioning peripherals (e.g., keyboard, mouse, printer)</li>
+            <li>Overheating</li>
+            <li>Random shutdowns</li>
+            <li>Slow performance</li>
+            <li>Hardware compatibility issues</li>
+            <li>Faulty components (e.g., RAM, hard drive, motherboard)</li>
+        </ul>
+    
+        <h3>2. Check Connections</h3>
+        <p>Often, hardware problems can be caused by looseor faulty connections. Make sure to:</p>
+        <ul>
+            <li>Check all cables, including power cords, data cables, and peripheral connections, to ensure they are securely plugged in.</li>
+            <li>Inspect the connectors for any damage or signs of wear and replace them if necessary.</li>
+        </ul>
+    
+        <h3>3. Restart Your System</h3>
+        <p>Before diving into complex troubleshooting steps, try restarting your computer. A simple restart can resolve many hardware issues, as it clears temporary files and resets system settings.</p>
+    
+        <h3>4. Update Drivers</h3>
+        <p>Outdated or incompatible device drivers can lead to hardware problems. Ensure that all your drivers are up to date by:</p>
+        <ul>
+            <li>Visiting the manufacturer's website and downloading the latest drivers for your hardware components.</li>
+            <li>Using a driver update tool to automatically scan and update your drivers.</li>
+        </ul>
+    
+        <h3>5. Run Diagnostic Tools</h3>
+        <p>Most computer systems come with built-in diagnostic tools that can help identify hardware issues. These tools perform tests on various hardware components, such as memory, hard drive, and CPU, to detect any errors. Use these tools to run comprehensive hardware diagnostics and identify faulty components.</p>
+    
+        <h3>6. Clean Dust and Debris</h3>
+        <p>Dust and debris can accumulate inside your computer over time, leading to overheating and performance issues. Regularly clean the internal components by:</p>
+        <ul>
+            <li>Using compressed air to blow away dust from fans, heat sinks, and vents.</li>
+            <li>Using an antistatic brush to gently remove dust from sensitive components.</li>
+        </ul>
+    
+        <h3>7. Backup Your Data</h3>
+        <p>Before performing any hardware maintenance or troubleshooting procedures, it's crucial to back up your important data. In case of hardware failure or data loss during troubleshooting, having a backup ensures that your files are safe and can be easily restored.</p>
+    
+        <h3>8. Seek Professional Help</h3>
+        <p>If you encounter complex hardware issues or are unsure about performing troubleshooting steps on your own, it's recommended to seek professional help. Certified technicians can diagnose and repair hardware problems efficiently, minimizing the risk of further damage.</p>
+    
+        <p>By following these basic hardware troubleshooting and maintenance practices, you can enhance the performance, reliability, and lifespan of your computer system. Remember to stay cautious while handling hardware components and consult experts when necessary.</p>
+        <p>For more in-depth information and guidance on hardware troubleshooting and maintenance, consider referring to reliable online resources or consulting official hardware documentation.</p>
+        <p>Take care of your hardware, and enjoy a smooth computing experience!</p>
+    </div>
+
+    <div class="content twtr">
+        <h3>Follow us on Twitter for updates</h3><a href="#" class="btn twtr">Follow</a>
+       
+    </div>
+
+    <footer>
+        <p>&copy; 2023 TUPISTHEBEST. All rights reserved.</p>
+    </footer>
+</body>
+</html>

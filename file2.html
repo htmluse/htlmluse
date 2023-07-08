@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advance Electronic Spreadsheet for Managing Information</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #800000; /* Dark crimson color */
+            color: #FFF; /* White text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            height: 50vw;
+            min-height: 400px;
+            max-height: 550px;
+            min-width: 300px;
+            color: #eee;
+        }
+
+        .header:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+        }
+
+        .header:before {
+            content: "";
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0); backface-visibility: hidden;
+            scale(1.0, 1.0);
+            transform: translateZ(0);
+            background: #1B2030 url(https://media.istockphoto.com/id/635969404/photo/hand-point-on-data-report-show-on-screen.jpg?s=612x612&w=0&k=20&c=ycW-KQEaw2TDG2IfACfAsEBQo7jspRqcxX7IuqA6OEs=) 50% 0 no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            animation: grow 360s linear 10ms infinite;
+            transition: all 0.4s ease-in-out;
+            z-index: -2;
+        }
+
+        .header a {
+            color: #eee;
+        }
+
+        .menu {
+            display: block;
+            width: 40px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            text-decoration: none;
+        }
+
+        .menu:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            margin: 0 auto;
+            top: 5px;
+            left: 0;
+            right: 0;
+            box-shadow: 0 8px, 0 16px;
+        }
+
+        .logo {
+            border: 2px solid #fff;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
+            margin: 20px;
+            padding: 0px 10px;
+            font-weight: 900;
+            font-size: 1.1em;
+            line-height: 1;
+            box-sizing: border-box;
+            height: 40px;
+        }
+
+        .sides, .info {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .info {
+            width: 100%;
+            padding: 15% 10% 0 10%;
+            text-align: center;
+            text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+
+        .author {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url(https://upload.wikimedia.org/wikipedia/en/c/c8/Technological_University_of_the_Philippines_Seal.svg) center no-repeat;
+            background-size: cover;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+            margin-bottom: 3px;
+        }
+
+        .info h4, .meta {
+            font-size: 0.7em;
+        }
+
+        .meta {
+            font-style: italic;
+        }
+
+        @keyframes grow {
+            0% { transform: scale(1) translateY(0px); }
+            50% { transform: scale(1.2) translateY(-400px); }
+        }
+
+        .content {
+            padding: 5% 10%;
+            text-align: left;
+            font-family: 'Roboto', Arial, sans-serif; /* Example font style */
+        }
+
+        .content p {
+            text-align: justify;
+        }
+
+        .btn {
+            color: #333;
+            border: 2px solid;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+
+        .twtr {
+            margin-top: 100px;
+        }
+
+        .btn.twtr:after {
+            content: "\1F426";
+            padding-left: 5px;
+        }
+
+        /* Additional style for left-aligned content */
+        .content-left {
+            text-align: left;
+        }
+
+        .content-left p {
+            text-align: left;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="menu"></a>
+        <a href="#" class="logo">ADVANCE ELECTRONIC SPREADSHEET FOR MANAGING INFORMATION </a>
+        <div class="info">
+            <div class="author"></div>
+            <h4>JOHN CEDRIC INTERTAS AND DANIEL CABRERA</h4>
+            <div class="meta">Author</div>
+        </div>
+    </div>
+
+    <div class="content content-left">
+        <h2>Advance Electronic Spreadsheet for Managing Information</h2>
+        <p>An advanced electronic spreadsheet is a software tool that allows users to organize, analyze, and manipulate large amounts of information in a structured and efficient manner. It provides a wide range of features and functionalities that go beyond basic spreadsheet capabilities.</p>
+
+        <h3>1. Data Organization</h3>
+        <p>It allows users to input and organize data in a structured format, such as tables or databases. This makes it easier to sort, filter, and search for specific information within the spreadsheet.</p>
+        <ul>
+            <li>General Excel Table (e.g., keyboard, mouse, printer)</li>
+            <li>Excel Table</li>
+            <li>Data Table</li>
+           <li>Pivot Table</li>
+        </ul>
+
+        <h3>2. Data Analysis</h3>
+        <p>Advanced spreadsheet software offers various built-in functions and formulas that enable users to perform complex calculations, statistical analyses, and data modeling.</p>
+        <ul>
+            <li>It can handle large datasets and generate reports or summaries based on the analyzed information.</li>
+        </ul>
+
+        <h3>3. Data Visualization</h3>
+        <p>The software provides tools for creating charts, graphs, and visual representations of the data. This helps users to understand and interpret the information more easily, identify trends, and present findings to others.</p>
+
+        <h3>4. Automation</h3>
+        <p>Advanced spreadsheets support automation through macros and scripting capabilities.</p>
+        <ul>
+            <li>Users can create custom scripts or macros to automate repetitive tasks, streamline data entry, or perform complex calculations automatically.</li>
+        </ul>
+
+        <h3>5. Collaboration</h3>
+        <p>The software allows multiple users to work on the same spreadsheet simultaneously, making it suitable for collaborative projects. It provides features like real-time updates, comments, and track changes, which facilitate collaboration and communication among team members.</p>
+
+        <h3>6. Integration</h3>
+        <p>Advanced spreadsheets can integrate with other software applications or data sources.</p>
+        <ul>
+            <li>They often support importing and exporting data from various file formats, databases, or online sources, enabling seamless data integration and exchange.</li>
+        </ul>
+
+        <h3>7. Security and Data Protection</h3>
+        <p>Advanced spreadsheet software provides robust security features to protect sensitive information.</p>
+	<p> Please take advantage of using the tables and spreadsheets in your software. Stay safe!</p>
+    </div>
+   
+
+    <div class="content twtr">
+        <h3>Follow us on Facebook/Twitter for updates</h3>
+        <a href="#" class="btn twtr">Follow</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 TUPISTHEBEST. All rights reserved.</p>
+    </footer>
+</body>
+</html>
